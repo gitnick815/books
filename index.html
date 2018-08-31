@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="navbar">
+            <h1 class="title">中文選書</h1>
+        </div>
+        <input class="radioBtn" type="radio" name="booksize" id="book_1" value="big" checked="checked" v-model="mode_size" />
+        <label for="book_1">顯示詳細</label>
+        <input class="radioBtn" type="radio" name="booksize" id="book_2" value="small" v-model="mode_size" />
+        <label for="book_2">顯示一覽</label>
+        <h1></h1>
+        <input class="radioBtn" type="radio" name="bookstore" id="store_1" value="books" v-model="book_store" />
+        <label class="selection" for="store_1">博客來選書</label>
+        <input class="radioBtn" type="radio" name="bookstore" id="store_2" value="eslite" checked="checked" v-model="book_store" />
+        <label class="selection" for="store_2">誠品選書</label>
+        <div class="booklist">
+            <h3 class="current-date">2018年五月</h3>
+            <div class="hitList" v-if="book_store=='books'">
+                <div class="hitItem {{mode_size}}" v-for="book in books">
+                    <div class="hitBox">
+                        <a href="#">
+                            <div class="image-center"><img class="itemImg" src="{{book.img}}" /></div><span class="hitTtl"> <span class="name">{{book.name}}</span><span v-if="mode_size=='big'">作者：{{book.author}} </span><span v-if="mode_size=='big'">出版社：{{book.publish_house}} </span><span v-if="mode_size=='big'">出版日期：{{book.date}}</span><span v-if="mode_size=='big'">優惠價：<strong>{{book.discount*100}}</strong>折<strong>{{parseInt(book.price*book.discount)}}</strong>元</span></span><span class="hitMore" v-if="mode_size=='big'">MORE</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hitList" v-if="book_store=='eslite'">
+                <div class="hitItem {{mode_size}}" v-for="book in eslite">
+                    <div class="hitBox">
+                        <a href="#">
+                            <div class="image-center"><img class="itemImg" src="{{book.img}}" /></div><span class="hitTtl"> <span class="name">{{book.name}}</span><span v-if="mode_size=='big'">作者：{{book.author}} </span><span v-if="mode_size=='big'">出版社：{{book.publish_house}} </span><span v-if="mode_size=='big'">出版日期：{{book.date}}</span><span v-if="mode_size=='big'">優惠價：<strong>{{book.discount*100}}</strong>折<strong>{{parseInt(book.price*book.discount)}}</strong>元</span></span><span class="hitMore" v-if="mode_size=='big'">MORE</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>

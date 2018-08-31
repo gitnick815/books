@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Meiryo, Arial, "MS PGothic", "Hiragino Kaku Gothic Pro", osaka, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #363636;
+}
+
+ul {
+    padding: 0;
+    margin: 20px 0;
+}
+
+strong {
+    color: #d93800;
+}
+
+.image-center {
+    text-align: center;
+}
+
+.bookstore_list {
+    list-style: none;
+    cursor: pointer;
+    background: #b0aba9;
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 5px;
+    line-height: 20px;
+    padding: 5px;
+}
+
+.bookstore_list:hover {
+    background: #40c1eb;
+}
+
+.booklist {
+    background-color: #ededed;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #ff7e00;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #8e8784;
+    font-size: 185%;
+    font-weight: bold;
+    line-height: 40px;
+    margin: 10px;
+    color: #fff;
+    padding: 20px 6px;
+    margin-top: 0;
+}
+
+.radioBtn {
+    display: none;
+}
+
+.radioBtn+label {
+    background-color: #a19c9a;
+    cursor: pointer;
+    padding: 3px 15px;
+}
+
+.radioBtn+label:hover {
+    opacity: 0.7;
+}
+
+.radioBtn:checked+label {
+    background-color: #ff7e00;
+    color: #ffffff;
+}
+
+.radioBtn:checked+.selection {
+    background: #40c1eb;
+}
+
+.current-date {
+    color: #636363;
+    margin: 16px;
+    font-size: 32px;
+    padding-top: 20px;
+}
+
+.hitList {
+    margin: 16px;
+}
+
+.hitList .name {
+    font-weight: bold;
+}
+
+.hitItem {
+    display: inline-block;
+    width: 208px;
+    vertical-align: top;
+    text-align: left;
+    margin: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.hitItem:hover {
+    box-shadow: 0px 0px 3px 2px #999999;
+}
+
+.hitItem img {
+    height: 200px;
+}
+
+.hitItem.small {
+    width: 100px;
+    height: 130px;
+    overflow: hidden;
+}
+
+.hitItem.small img {
+    height: 100px;
+}
+
+.hitItem.small .name {
+    font-size: 14px;
+}
+
+.hitBox {
+    position: relative;
+}
+
+.hitBox span {
+    display: block;
+}
+
+.hitItem.big .itemImg {
+    opacity: 0.7;
+    transition: 0.6s;
+}
+
+.hitItem.big .itemImg:hover {
+    opacity: 1;
+}
+
+.hitItem.big .hitTtl {
+    height: 200px;
+    background: #383838;
+    color: #dddddd;
+    transition: 0.6s;
+    padding-top: 10px;
+}
+
+.hitItem.big .hitTtl span {
+    background: url(https://i.imgur.com/3PlaCZa.gif) 2px 0.4em no-repeat;
+    padding-left: 15px;
+}
+
+.hitItem.big:hover .hitTtl {
+    background: inherit;
+    color: inherit;
+}
+
+.hitMore {
+    display: inline-block;
+    font-weight: bold;
+    background: url(https://i.imgur.com/KF9XD9w.gif) 4px 0.7em no-repeat #ededed;
+    padding: 3px 10px 3px 15px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
